@@ -1,0 +1,27 @@
+<odoo>
+    <!-- 5 строк для модели hr.hospital.diseases -->
+    <record id="disease_gripp" model="hr.hospital.diseases">
+        <field name="name">Грипп</field>
+        <field name="active">True</field>
+    </record>
+
+    <record id="disease_hitrozheltnost" model="hr.hospital.diseases">
+        <field name="name">Хитрожёлтость</field>
+        <field name="active">True</field>
+    </record>
+
+    <record id="disease_angina" model="hr.hospital.diseases">
+        <field name="name">Ангина</field>
+        <field name="active">True</field>
+    </record>
+
+    <record id="disease_nasmork" model="hr.hospital.diseases">
+        <field name="name">Насморк</field>
+        <field name="active">True</field>
+    </record>
+
+    <record id="disease_shlangit" model="hr.hospital.diseases">
+        <field name="name">шлангит</field>
+        <field name="active">True</field>
+    </record>
+</odoo>

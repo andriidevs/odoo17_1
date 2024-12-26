@@ -1,0 +1,18 @@
+
+<odoo>
+    <!-- 3 строки для модели hr.hospital.patient -->
+    <record id="demo_patient_petrovky" model="hr.hospital.patient">
+        <field name="name">Петровький</field>
+        <field name="active">True</field>
+    </record>
+
+    <record id="demo_patient_sidorenkovski" model="hr.hospital.patient">
+        <field name="name">Сидоренковськи</field>
+        <field name="active">True</field>
+    </record>
+
+    <record id="demo_patient_balabukhovski" model="hr.hospital.patient">
+        <field name="name">Балабуховський</field>
+        <field name="active">True</field>
+    </record>
+</odoo>

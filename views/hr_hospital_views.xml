@@ -1,0 +1,199 @@
+<odoo>
+    <!-- ================== 1. VIEWs (дерево и форма) ================== -->
+    <!-- Visits: tree и form -->
+    <record id="view_hr_hospital_visits_tree" model="ir.ui.view">
+        <field name="name">hr.hospital.visits.tree</field>
+        <field name="model">hr.hospital.visits</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="date"/>
+                <field name="hr_patient_id"/>
+                <field name="hr_doctor_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_hr_hospital_visits_form" model="ir.ui.view">
+        <field name="name">hr.hospital.visits.form</field>
+        <field name="model">hr.hospital.visits</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="date"/>
+                        <field name="hr_patient_id"/>
+                        <field name="hr_doctor_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Patients: tree и form -->
+    <record id="view_hr_hospital_patient_tree" model="ir.ui.view">
+        <field name="name">hr.hospital.patient.tree</field>
+        <field name="model">hr.hospital.patient</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="phone"/>
+                <field name="email"/>
+                <field name="active"/>
+                <field name="hr_hospital_diseases_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_hr_hospital_patient_form" model="ir.ui.view">
+        <field name="name">hr.hospital.patient.form</field>
+        <field name="model">hr.hospital.patient</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="phone"/>
+                        <field name="email"/>
+                        <field name="active"/>
+                        <field name="description"/>
+                        <field name="hr_hospital_diseases_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Doctors: tree и form -->
+    <record id="view_hr_hospital_doctor_tree" model="ir.ui.view">
+        <field name="name">hr.hospital.doctor.tree</field>
+        <field name="model">hr.hospital.doctor</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="phone"/>
+                <field name="email"/>
+                <field name="active"/>
+                <field name="hr_hospital_diseases_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_hr_hospital_doctor_form" model="ir.ui.view">
+        <field name="name">hr.hospital.doctor.form</field>
+        <field name="model">hr.hospital.doctor</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="phone"/>
+                        <field name="email"/>
+                        <field name="active"/>
+                        <field name="description"/>
+                        <field name="hr_hospital_diseases_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Diseases: tree и form -->
+    <record id="view_hr_hospital_diseases_tree" model="ir.ui.view">
+        <field name="name">hr.hospital.diseases.tree</field>
+        <field name="model">hr.hospital.diseases</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="active"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_hr_hospital_diseases_form" model="ir.ui.view">
+        <field name="name">hr.hospital.diseases.form</field>
+        <field name="model">hr.hospital.diseases</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="active"/>
+                        <field name="description"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <!-- =============== 2. ACTIONs (окна для каждой модели) =============== -->
+
+    <!-- Visits Action -->
+    <record id="action_hr_hospital_visits" model="ir.actions.act_window">
+        <field name="name">Visits</field>
+        <field name="res_model">hr.hospital.visits</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Patients Action -->
+    <record id="action_hr_hospital_patient" model="ir.actions.act_window">
+        <field name="name">Patients</field>
+        <field name="res_model">hr.hospital.patient</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Doctors Action -->
+    <record id="action_hr_hospital_doctor" model="ir.actions.act_window">
+        <field name="name">Doctors</field>
+        <field name="res_model">hr.hospital.doctor</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Diseases Action -->
+    <record id="action_hr_hospital_diseases" model="ir.actions.act_window">
+        <field name="name">Diseases</field>
+        <field name="res_model">hr.hospital.diseases</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- =============== 3. MENUs (корневое меню + вложенные) =============== -->
+
+    <!-- Корневое меню -->
+    <menuitem
+        id="menu_hr_hospital_root"
+        name="Hospital"
+        sequence="10" />
+
+    <!-- Подменю для Visits -->
+    <menuitem
+        id="menu_hr_hospital_visits"
+        name="Visits"
+        parent="menu_hr_hospital_root"
+        action="action_hr_hospital_visits"
+        sequence="20"/>
+
+    <!-- Подменю для Patients -->
+    <menuitem
+        id="menu_hr_hospital_patient"
+        name="Patients"
+        parent="menu_hr_hospital_root"
+        action="action_hr_hospital_patient"
+        sequence="30"/>
+
+    <!-- Подменю для Doctors -->
+    <menuitem
+        id="menu_hr_hospital_doctor"
+        name="Doctors"
+        parent="menu_hr_hospital_root"
+        action="action_hr_hospital_doctor"
+        sequence="40"/>
+
+    <!-- Подменю для Diseases -->
+    <menuitem
+        id="menu_hr_hospital_diseases"
+        name="Diseases"
+        parent="menu_hr_hospital_root"
+        action="action_hr_hospital_diseases"
+        sequence="50"/>
+</odoo>
