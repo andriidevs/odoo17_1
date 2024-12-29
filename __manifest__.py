@@ -17,7 +17,8 @@
 
     'data': [
         'security/ir.model.access.csv',
-        'views/hr_hospital_views.xml'
+        'views/hr_hospital_views.xml',
+        'data/diseases_data.xml'
     ],
     'demo': [
         'demo/doctor_demo.xml',         # Демо-данные
