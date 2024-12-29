@@ -16,6 +16,13 @@
     },
 
     'data': [
+        'security/ir.model.access.csv',
+        #'views/odoo_school_library_menu.xml',
+        'views/odoo_school_library_book_views.xml',
+
+        'views/hr_hospital_views.xml',
+        'data/diseases_data.xml',
+
         'views/hr_hospital_views.xml',
         'data/diseases_data.xml',
     ],
