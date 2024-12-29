@@ -5,7 +5,7 @@
     'website': 'https://odoo.ab/',
     'category': 'Customizations',
     'license': 'OPL-1',
-    'version': '17.0.0.2.0',
+    'version': '17.0.0.2.1',
 
     'depends': [
         'base',
@@ -18,7 +18,6 @@
     'data': [
         'security/ir.model.access.csv',
         'views/hr_hospital_views.xml'
-        #'views/odoo_school_library_menu.xml',
     ],
     'demo': [
         'demo/doctor_demo.xml',         # Демо-данные
