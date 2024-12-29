@@ -5,7 +5,7 @@
     'website': 'https://odoo.ab/',
     'category': 'Customizations',
     'license': 'OPL-1',
-    'version': '17.0.0.1.0',
+    'version': '17.0.0.2.0',
 
     'depends': [
         'base',
