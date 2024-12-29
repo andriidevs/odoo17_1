@@ -17,14 +17,8 @@
 
     'data': [
         'security/ir.model.access.csv',
+        'views/hr_hospital_views.xml'
         #'views/odoo_school_library_menu.xml',
-        'views/odoo_school_library_book_views.xml',
-
-        'views/hr_hospital_views.xml',
-        'data/diseases_data.xml',
-
-        'views/hr_hospital_views.xml',
-        'data/diseases_data.xml',
     ],
     'demo': [
         'demo/doctor_demo.xml',         # Демо-данные
