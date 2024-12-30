@@ -7,5 +7,5 @@ class HrHospitalVisits(models.Model):
 
     id = fields.Integer()
     date = fields.Datetime()
-    hr_patient_id = fields.Many2one('hr.patient', string='HR Patient')
-    hr_doctor_id = fields.Many2one('hr.doctor', string='HR Doctor')
+    hr_patient_id = fields.Many2one(comodel_name='hr.patient', string='HR Patient')
+    hr_doctor_id = fields.Many2one(comodel_name='hr.doctor', string='HR Doctor')
