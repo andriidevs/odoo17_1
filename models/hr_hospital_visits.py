@@ -1,6 +1,5 @@
 from odoo import models, fields
 
-
 class HrHospitalVisits(models.Model):
     _name = 'hr.hospital.visits'
     _description = 'HR Hospital Visits'
