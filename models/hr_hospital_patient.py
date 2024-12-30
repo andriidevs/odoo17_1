@@ -12,6 +12,6 @@ class HrHospitalPatient(models.Model):
     active = fields.Boolean()
     description = fields.Text()
     hr_hospital_diseases_id = fields.Many2one(
-        'hr.hospital.diseases',
+        comodel_name='hr.hospital.diseases',
         string = "Diseas"
     )
